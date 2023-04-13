@@ -42,7 +42,7 @@ let api: ChatGPTAPI | ChatGPTUnofficialProxyAPI
 
     const options: ChatGPTAPIOptions = {
       apiKey: process.env.OPENAI_API_KEY,
-      completionParams: { model },
+      completionParams: { model, max_tokens: 4096 },
       debug: !disableDebug,
     }
 
